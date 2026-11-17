@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drewin Surf School | Cours de surf à Sassandra, Côte d'Ivoire</title>
+  <meta name="description" content="Drewin Surf School – cours de surf pour tous niveaux à Sassandra, Côte d'Ivoire. Réservez votre cours dès aujourd'hui !">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
+  <style>
+:root {
+  --orange: #FF6230;
+  --black: #000;
+  --white: #fff;
+  --display: 'Neue Haas Grotesk Display Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --body: 'Barlow', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--body);
+  background: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ===== LANGUAGE BUTTON (fixed, top right) ===== */
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  padding: 32px;
+}
+.lang-btn {
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  border: 1.5px solid #000;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-btn:hover { background: #000; color: #fff; }
+
+/* ===== HERO ===== */
+.hero {
+  padding: 128px 32px 48px;
+}
+.logo {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  object-fit: cover;
+}
+.hero-title {
+  font-size: clamp(44px, 8.4vw, 116px);
+  line-height: 1;
+  letter-spacing: -0.04em; word-spacing: 0.12em;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.hero-location {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+.hero-image-container {
+  position: relative;
+}
+.hero-img {
+  width: 100%;
+  height: clamp(320px, 56vw, 620px);
+  object-fit: cover;
+  border-radius: 24px;
+}
+.cta-card {
+  position: absolute;
+  right: 48px;
+  bottom: 48px;
+  width: min(426px, calc(100% - 32px));
+  background: var(--orange);
+  border-radius: 32px;
+  padding: 32px;
+  color: #000;
+}
+.cta-card h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.1;
+  letter-spacing: 0.01em; word-spacing: 0.12em;
+  margin-bottom: 12px;
+}
+.cta-card p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+.contact-info { display: flex; flex-direction: column; gap: 12px; }
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.contact-item a { color: inherit; text-decoration: none; }
+.contact-item a:hover { text-decoration: underline; }
+
+/* ===== SPIRIT ===== */
+.spirit-section { padding: 128px 32px; }
+.spirit-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 32px;
+  align-items: start;
+}
+.spirit-title {
+  font-size: clamp(40px, 7vw, 96px);
+  line-height: 1;
+  letter-spacing: -0.03em; word-spacing: 0.12em;
+  margin-bottom: 32px;
+}
+.fade {
+  background: linear-gradient(to right, #000, rgba(0,0,0,0.5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.orange-line {
+  width: 80px;
+  height: 4px;
+  background: var(--orange);
+  margin-bottom: 32px;
+}
+.spirit-desc {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(0,0,0,0.7);
+  max-width: 300px;
+}
+.spirit-img {
+  width: 100%;
+  aspect-ratio: 672 / 700;
+  object-fit: cover;
+  border-radius: 24px;
+  margin-bottom: 32px;
+}
+.spirit-img-small {
+  width: 48%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 24px;
+  margin: 64px 0 32px;
+}
+.feature-title {
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1;
+  letter-spacing: 0.0em; word-spacing: 0.12em;
+  margin-bottom: 16px;
+}
+.feature-desc {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(0,0,0,0.8);
+  max-width: 640px;
+}
+
+/* ===== MARQUEE ===== */
+.marquee-section {
+  background: #000;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.marquee { overflow: hidden; white-space: nowrap; width: 100%; }
+.marquee-content {
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+}
+.marquee-content span {
+  font-family: var(--display);
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 700;
+  line-height: 100px;
+  letter-spacing: -0.04em;
+  color: var(--orange);
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===== TEACHER ===== */
+.teacher-section { padding: 128px 32px; }
+.teacher-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 64px;
+  align-items: center;
+}
+.teacher-img {
+  width: 100%;
+  aspect-ratio: 432 / 500;
+  object-fit: cover;
+  object-position: 82% 50%;
+  border-radius: 24px;
+}
+.teacher-title {
+  font-size: clamp(44px, 6.5vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.02em; word-spacing: 0.12em;
+  margin-bottom: 32px;
+}
+.teacher-desc {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(0,0,0,0.7);
+  margin-bottom: 24px;
+  max-width: 560px;
+}
+.teacher-cta {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: rgba(0,0,0,0.85);
+}
+
+/* ===== PRICES ===== */
+.prices-section {
+  background: #000;
+  color: #fff;
+  padding: 128px 32px;
+}
+.prices-title {
+  font-size: clamp(36px, 6.5vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.02em; word-spacing: 0.12em;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.prices-desc {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.7);
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+.prices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.price-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 32px;
+}
+.price-card h3 {
+  font-size: clamp(20px, 2.4vw, 30px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.price-card .price {
+  font-family: var(--display);
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+.price-card .price-info {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ===== JOURNAL ===== */
+.journal-section { padding: 128px 32px; }
+.journal-title {
+  font-size: clamp(36px, 7vw, 96px);
+  line-height: 1;
+  letter-spacing: -0.03em; word-spacing: 0.12em;
+  margin-bottom: 16px;
+}
+.journal-desc {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.7);
+  margin-bottom: 48px;
+}
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 380px;
+  gap: 24px;
+}
+.journal-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #e5e5e5;
+}
+.journal-item.wide { grid-column: span 2; }
+.journal-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.journal-item:hover img { transform: scale(1.04); }
+.journal-caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 56px 20px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+  color: #fff;
+}
+.journal-caption h3 {
+  font-size: clamp(15px, 1.8vw, 24px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.journal-caption p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ===== LOCATION ===== */
+.location-section { background: var(--orange); color: #000; }
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 700px;
+}
+.location-info {
+  padding: 96px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.location-title {
+  font-size: clamp(44px, 7vw, 96px);
+  line-height: 1;
+  letter-spacing: -0.03em; word-spacing: 0.12em;
+  margin-bottom: 48px;
+}
+.location-details { margin-bottom: 28px; }
+.underline-title {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  margin-bottom: 10px;
+}
+.location-details p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.address-line { display: flex; align-items: center; gap: 8px; }
+.directions-btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  width: fit-content;
+  margin-top: 8px;
+}
+.map-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: 0;
+  background: #e5e7eb;
+}
+
+/* ===== FOOTER ===== */
+.footer-main {
+  background: #000;
+  color: #fff;
+  padding: 128px 32px;
+  text-align: center;
+}
+.footer-title {
+  font-size: clamp(56px, 10vw, 123px);
+  line-height: 0.8;
+  letter-spacing: -0.01em; word-spacing: 0.12em;
+  margin-bottom: 72px;
+  background: linear-gradient(#fff, rgba(255,255,255,0.5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  padding-bottom: 8px;
+}
+.footer-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  margin-bottom: 64px;
+}
+.footer-contact-item { text-align: center; }
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.footer-contact-item h4 {
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+.footer-contact-item p { font-size: 18px; font-weight: 500; color: rgba(255,255,255,0.7); }
+.footer-contact-item a { color: inherit; text-decoration: none; }
+.footer-contact-item a:hover { color: #fff; text-decoration: underline; }
+.footer-cta {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.7);
+  max-width: 640px;
+  margin: 0 auto;
+}
+.footer-bar {
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.6);
+  padding: 32px;
+  font-size: 14px;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .site-header { padding: 16px; }
+  .hero { padding: 96px 16px 32px; }
+  .logo { width: 96px; height: 96px; }
+  .hero-title { letter-spacing: -0.03em; word-spacing: 0.12em; }
+  .cta-card { position: relative; right: auto; bottom: auto; width: 100%; margin-top: 16px; }
+  .spirit-section, .teacher-section, .prices-section, .journal-section { padding: 80px 16px; }
+  .spirit-grid, .teacher-grid { grid-template-columns: 1fr; }
+  .spirit-img-small { width: 70%; margin-top: 40px; }
+  .prices-grid { grid-template-columns: 1fr; }
+  .journal-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 260px; gap: 16px; }
+  .location-grid { grid-template-columns: 1fr; min-height: 0; }
+  .location-info { padding: 64px 16px; }
+  .map-frame { height: 420px; }
+  .footer-main { padding: 80px 16px; }
+  .footer-contacts { flex-direction: column; gap: 40px; }
+  .footer-bar { padding: 24px 16px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+  </style>
+</head>
+<body>
+<!-- DREWIN SURF SCHOOL - surfdrewin.com -->
+<header class="site-header">
+  <button class="lang-btn" id="lang-btn" onclick="toggleLang()" aria-label="Switch language">EN</button>
+</header>
+
+<section class="hero">
+  <img class="logo" src="images/logo.png" alt="Drewin Surf School logo" width="480" height="480">
+  <h1 class="hero-title">DREWIN SURF SCHOOL</h1>
+  <div class="hero-location">
+    <span>CÔTE D'IVOIRE</span>
+    <span>SASSANDRA</span>
+  </div>
+
+  <div class="hero-image-container">
+    <img class="hero-img" src="images/hero.jpg" alt="Drewin Surf School, Sassandra, Côte d'Ivoire" width="1920" height="1280">
+    <div class="cta-card">
+      <h2 data-fr="RÉSERVEZ UN COURS DE SURF À SASSANDRA" data-en="BOOK A SURF LESSON IN SASSANDRA">RÉSERVEZ UN COURS DE SURF À SASSANDRA</h2>
+      <p data-fr="Cours de surf pour tous niveaux. Rejoignez la tribu aujourd'hui." data-en="Surf lessons for all levels. Join the tribe today.">Cours de surf pour tous niveaux. Rejoignez la tribu aujourd'hui.</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><a href="tel:+2250700533076">+225 07 00 53 30 76</a></span>
+        </div>
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span><a href="mailto:ezechieltaho04@gmail.com">ezechieltaho04@gmail.com</a></span>
+        </div>
+        <div class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span><a href="https://instagram.com/surfdrewin" target="_blank" rel="noopener">@surfdrewin</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spirit-section">
+  <div class="spirit-grid">
+    <div class="spirit-left">
+      <h2 class="spirit-title" data-fr-html="L'ESPRIT<br><span class='fade'>DU SURF</span>" data-en-html="THE<br>SPIRIT<br><span class='fade'>OF SURF</span>">L'ESPRIT<br><span class="fade">DU SURF</span></h2>
+      <div class="orange-line"></div>
+      <p class="spirit-desc" data-fr="Bien plus que tenir debout sur une planche. C'est lire l'océan, respecter la nature, et trouver son flow." data-en="More than just standing on a board. It's about reading the ocean, respecting nature, and finding your flow.">Bien plus que tenir debout sur une planche. C'est lire l'océan, respecter la nature, et trouver son flow.</p>
+    </div>
+    <div class="spirit-right">
+      <img class="spirit-img" src="images/spirit-surfer.jpg" alt="Surfeur sur une vague à Sassandra" loading="lazy" width="1344" height="896">
+      <h3 class="feature-title" data-fr="ENCADREMENT EXPERT" data-en="EXPERT GUIDANCE">ENCADREMENT EXPERT</h3>
+      <p class="feature-desc" data-fr="Nos instructeurs ne sont pas seulement surfeurs ; ce sont des experts en sécurité océanique et des éducateurs passionnés. Nous décomposons la mécanique du surf en étapes compréhensibles, pour que vous construisiez des bases solides dès votre première session." data-en="Our instructors aren't just surfers; they are ocean safety experts and passionate educators. We break down the mechanics of surfing into understandable steps, ensuring you build a solid foundation from your very first paddle-out.">Nos instructeurs ne sont pas seulement surfeurs ; ce sont des experts en sécurité océanique et des éducateurs passionnés. Nous décomposons la mécanique du surf en étapes compréhensibles, pour que vous construisiez des bases solides dès votre première session.</p>
+
+      <img class="spirit-img-small" src="images/spirit-beach.jpg" alt="Drewin Surf School, session de surf" loading="lazy" width="1000" height="667">
+      <h3 class="feature-title" data-fr="LA COMMUNAUTÉ AVANT TOUT" data-en="COMMUNITY FIRST">LA COMMUNAUTÉ AVANT TOUT</h3>
+      <p class="feature-desc" data-fr="Nous cultivons un environnement bienveillant et sans jugement. Que vous soyez grand débutant ou que vous perfectionniez votre cutback, vous faites partie de la famille Drewin. On célèbre chaque vague et chaque chute ensemble." data-en="We foster a supportive, non-judgmental environment. Whether you're a complete beginner or refining your cutback, you're part of the Drewin family. We celebrate every ride and every wipeout together.">Nous cultivons un environnement bienveillant et sans jugement. Que vous soyez grand débutant ou que vous perfectionniez votre cutback, vous faites partie de la famille Drewin. On célèbre chaque vague et chaque chute ensemble.</p>
+    </div>
+  </div>
+</section>
+
+<section class="marquee-section" aria-hidden="true">
+  <div class="marquee">
+    <div class="marquee-content">
+      <span>WAVES // PASSION // COMMUNITY // FREEDOM // WAVES // PASSION // COMMUNITY // FREEDOM // WAVES // PASSION // COMMUNITY // FREEDOM // WAVES // PASSION // COMMUNITY // FREEDOM // &nbsp;</span>
+      <span>WAVES // PASSION // COMMUNITY // FREEDOM // WAVES // PASSION // COMMUNITY // FREEDOM // WAVES // PASSION // COMMUNITY // FREEDOM // WAVES // PASSION // COMMUNITY // FREEDOM // &nbsp;</span>
+    </div>
+  </div>
+</section>
+
+<section class="teacher-section">
+  <div class="teacher-grid">
+    <img class="teacher-img" src="images/teacher.jpg" alt="Ezechiel Taho, instructeur de surf à Drewin Surf School" loading="lazy" width="1400" height="933">
+    <div class="teacher-info">
+      <h2 class="teacher-title" data-fr-html="NOTRE<br>INSTRUCTEUR" data-en-html="OUR<br>TEACHER">NOTRE<br>INSTRUCTEUR</h2>
+      <p class="teacher-desc" data-fr="Ezechiel Taho est un instructeur expérimenté, pratiquant le surf depuis l'âge de 10 ans, ayant participé à des compétitions locales et internationales. Passionné par le partage de l'art et de la joie du surf, il vous proposera des cours personnalisés adaptés à tous les niveaux." data-en="Ezechiel Taho is an experienced instructor, having surfed since the age of 10, competed both locally and internationally, he is passionate about sharing the art and joy of surfing. With years of expertise and a commitment to safety, he will provide you with personalized lessons adapted to any skill levels.">Ezechiel Taho est un instructeur expérimenté, pratiquant le surf depuis l'âge de 10 ans, ayant participé à des compétitions locales et internationales. Passionné par le partage de l'art et de la joie du surf, il vous proposera des cours personnalisés adaptés à tous les niveaux.</p>
+      <p class="teacher-cta" data-fr="N'attendez plus ! Apprenez avec les meilleurs et découvrez votre potentiel dans l'eau." data-en="Don't wait ! Learn from the best and discover your potential in the water.">N'attendez plus ! Apprenez avec les meilleurs et découvrez votre potentiel dans l'eau.</p>
+    </div>
+  </div>
+</section>
+
+<section class="prices-section">
+  <h2 class="prices-title" data-fr="NOS TARIFS" data-en="OUR PRICES">NOS TARIFS</h2>
+  <p class="prices-desc" data-fr="Des tarifs abordables et flexibles pour tout le monde. Que vous soyez débutant ou souhaitiez progresser, nous avons des formules adaptées à vos besoins." data-en="Affordable and flexible pricing options for everyone. Whether you're a beginner or looking to advance your skills, we have packages tailored to your needs.">Des tarifs abordables et flexibles pour tout le monde. Que vous soyez débutant ou souhaitiez progresser, nous avons des formules adaptées à vos besoins.</p>
+  <div class="prices-grid">
+    <div class="price-card">
+      <h3 data-fr="COURS PARTICULIER" data-en="PRIVATE LESSON">COURS PARTICULIER</h3>
+      <p class="price">10 000 CFA</p>
+      <p class="price-info" data-fr="Idéal pour tout surfeur souhaitant progresser rapidement" data-en="Perfect for any surfer looking to improve in no time">Idéal pour tout surfeur souhaitant progresser rapidement</p>
+    </div>
+    <div class="price-card">
+      <h3 data-fr="LOCATION DE PLANCHE" data-en="BOARD RENTAL">LOCATION DE PLANCHE</h3>
+      <p class="price">5 000 CFA</p>
+      <p class="price-info" data-fr="Pour ceux qui connaissent le sport et veulent s'amuser" data-en="For those who know the sport and looking to have a bit of fun">Pour ceux qui connaissent le sport et veulent s'amuser</p>
+    </div>
+    <div class="price-card">
+      <h3 data-fr="LOCATION DE COMBINAISON" data-en="WETSUIT RENTAL">LOCATION DE COMBINAISON</h3>
+      <p class="price">5 000 CFA</p>
+      <p class="price-info" data-fr="Pour les jours plus frais" data-en="On those fresher days">Pour les jours plus frais</p>
+    </div>
+  </div>
+</section>
+
+<section class="journal-section">
+  <h2 class="journal-title" data-fr="JOURNAL VISUEL" data-en="VISUAL JOURNAL">JOURNAL VISUEL</h2>
+  <p class="journal-desc" data-fr="Des instants capturés dans le sel et le soleil." data-en="Moments captured in the salt and sun.">Des instants capturés dans le sel et le soleil.</p>
+  <div class="journal-grid">
+    <figure class="journal-item wide">
+      <img src="images/journal-1-sunset.jpg" alt="Sunset Surf Session" loading="lazy">
+      <figcaption class="journal-caption">
+        <h3 data-fr="SESSION DE SURF AU COUCHER DU SOLEIL" data-en="SUNSET SURF SESSION">SESSION DE SURF AU COUCHER DU SOLEIL</h3>
+        <p data-fr="Capturer l'heure dorée depuis Drewin." data-en="Capturing the golden hour from Drewin.">Capturer l'heure dorée depuis Drewin.</p>
+      </figcaption>
+    </figure>
+    <figure class="journal-item">
+      <img src="images/journal-2-hug.jpg" alt="Beginner's First Wave" loading="lazy">
+      <figcaption class="journal-caption">
+        <h3 data-fr="LA PREMIÈRE VAGUE D'UN DÉBUTANT" data-en="BEGINNER'S FIRST WAVE">LA PREMIÈRE VAGUE D'UN DÉBUTANT</h3>
+        <p data-fr="La pure joie d'un débutant qui attrape sa toute première vague avec l'aide d'un instructeur." data-en="The pure joy of a beginner catching their very first wave with an instructor's help.">La pure joie d'un débutant qui attrape sa toute première vague avec l'aide d'un instructeur.</p>
+      </figcaption>
+    </figure>
+    <figure class="journal-item">
+      <img src="images/journal-3-wave.jpg" alt="Paddle Boarding Adventure" loading="lazy">
+      <figcaption class="journal-caption">
+        <h3 data-fr="AVENTURE EN PADDLE" data-en="PADDLE BOARDING ADVENTURE">AVENTURE EN PADDLE</h3>
+        <p data-fr="Profiter de la fin d'une longue vague." data-en="Enjoying the end of a long wave.">Profiter de la fin d'une longue vague.</p>
+      </figcaption>
+    </figure>
+    <figure class="journal-item wide">
+      <img src="images/journal-4-group.jpg" alt="Surf School Group Photo" loading="lazy">
+      <figcaption class="journal-caption">
+        <h3 data-fr="PHOTO DE GROUPE DE L'ÉCOLE DE SURF" data-en="SURF SCHOOL GROUP PHOTO">PHOTO DE GROUPE DE L'ÉCOLE DE SURF</h3>
+        <p data-fr="N'oubliez jamais l'échauffement avant un cours de surf réussi." data-en="Never forget the warm up before a successful surf lesson.">N'oubliez jamais l'échauffement avant un cours de surf réussi.</p>
+      </figcaption>
+    </figure>
+    <figure class="journal-item">
+      <img src="images/journal-5-wave.jpg" alt="Advanced Surfing Techniques" loading="lazy">
+      <figcaption class="journal-caption">
+        <h3 data-fr="TECHNIQUES DE SURF AVANCÉES" data-en="ADVANCED SURFING TECHNIQUES">TECHNIQUES DE SURF AVANCÉES</h3>
+        <p data-fr="Un surfeur expérimenté démontre des manœuvres avancées sur une vague puissante." data-en="An experienced surfer demonstrating advanced maneuvers on a powerful wave.">Un surfeur expérimenté démontre des manœuvres avancées sur une vague puissante.</p>
+      </figcaption>
+    </figure>
+    <figure class="journal-item">
+      <img src="images/journal-6-boat.jpg" alt="Beach Cleanup Day" loading="lazy">
+      <figcaption class="journal-caption">
+        <h3 data-fr="JOURNÉE DE NETTOYAGE DE LA PLAGE" data-en="BEACH CLEANUP DAY">JOURNÉE DE NETTOYAGE DE LA PLAGE</h3>
+        <p data-fr="Profitez de la vie lente au bord de l'océan et de la plage locale." data-en="Enjoy the slow life by the ocean and local beach.">Profitez de la vie lente au bord de l'océan et de la plage locale.</p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="location-section">
+  <div class="location-grid">
+    <div class="location-info">
+      <h2 class="location-title" data-fr-html="TROUVEZ<br>LE<br>SPOT" data-en-html="FIND<br>THE<br>SPOT">TROUVEZ<br>LE<br>SPOT</h2>
+      <div class="location-details">
+        <h3 class="underline-title" data-fr="LIEU" data-en="LOCATION">LIEU</h3>
+        <p>Drewin Surf School</p>
+      </div>
+      <div class="location-details">
+        <h3 class="underline-title" data-fr="ADRESSE" data-en="ADDRESS">ADRESSE</h3>
+        <p class="address-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Grand Drewin, Sassandra
+        </p>
+      </div>
+      <a class="directions-btn" href="https://www.google.com/maps?q=4.918214,-6.143278" target="_blank" rel="noopener" data-fr="OBTENIR L'ITINÉRAIRE" data-en="GET DIRECTIONS">OBTENIR L'ITINÉRAIRE</a>
+    </div>
+    <iframe class="map-frame" title="Drewin Surf School, Grand Drewin, Sassandra" src="https://www.google.com/maps?q=4.918214,-6.143278&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-main">
+    <h2 class="footer-title" data-fr="SURFONS !" data-en="LET'S SURF">SURFONS !</h2>
+    <div class="footer-contacts">
+      <div class="footer-contact-item">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h4 data-fr="APPELEZ-NOUS" data-en="CALL US">APPELEZ-NOUS</h4>
+        <p><a href="tel:+2250700533076">+225 07 00 53 30 76</a></p>
+      </div>
+      <div class="footer-contact-item">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h4 data-fr="ÉCRIVEZ-NOUS" data-en="EMAIL US">ÉCRIVEZ-NOUS</h4>
+        <p><a href="mailto:ezechieltaho04@gmail.com">ezechieltaho04@gmail.com</a></p>
+      </div>
+    </div>
+    <p class="footer-cta" data-fr="Prêt à attraper votre première vague ? Contactez-nous dès aujourd'hui pour réserver votre cours ou en savoir plus sur nos programmes." data-en="Ready to catch your first wave? Contact us today to book your lesson or learn more about our programs.">Prêt à attraper votre première vague ? Contactez-nous dès aujourd'hui pour réserver votre cours ou en savoir plus sur nos programmes.</p>
+  </div>
+  <div class="footer-bar">
+    <div class="footer-bottom">
+      <span data-fr="© 2026 Drewin Surf School. Tous droits réservés." data-en="© 2026 Drewin Surf School. All rights reserved.">© 2026 Drewin Surf School. Tous droits réservés.</span>
+      <span data-fr="Conçu avec passion pour l'océan" data-en="Designed with passion for the ocean">Conçu avec passion pour l'océan</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var currentLang = 'fr';
+
+  function applyLang() {
+    document.documentElement.lang = currentLang;
+    document.querySelectorAll('[data-fr-html]').forEach(function (el) {
+      el.innerHTML = el.getAttribute('data-' + currentLang + '-html');
+    });
+    document.querySelectorAll('[data-fr]:not([data-fr-html])').forEach(function (el) {
+      el.textContent = el.getAttribute('data-' + currentLang);
+    });
+    document.getElementById('lang-btn').textContent = currentLang === 'fr' ? 'EN' : 'FR';
+  }
+
+  function toggleLang() {
+    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+    applyLang();
+  }
+
+  applyLang();
+</script>
+</body>
+</html>
